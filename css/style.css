@@ -11,6 +11,7 @@
     rgba(253, 211, 77, 0.15) 0%,
     rgba(253, 211, 77, 0) 70%
   );
+  --y2k-bg: #f6f6f6;
   --gradient-accent: linear-gradient(90deg, #8d4a00 0%, #fe973c 100%);
   --btn-text: #fff0e7;
 }
@@ -206,11 +207,251 @@ body {
   color: var(--title-color);
 }
 
-.hero-img {
-    position: relative;
-    left: -15px;
+.card {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 48px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+}
+
+.hero-main {
+  max-width: 425px;
+  right: 350px;
+  top: 260px;
+  transform: rotate(3deg);
+  z-index: 1;
+}
+
+.hero-small {
+  max-width: 300px;
+  left: 1050px;
+  bottom: 175px;
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+/* y2k */
+
+.y2k {
+  padding-bottom: 128px;
+  background: var(--y2k-bg);
+}
+
+.y2k .container {
+  max-width: 1184px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.y2k-content {
+  flex: 0 1 552px;
+  max-width: 552px;
+  min-width: 0;
+}
+
+.y2k-title {
+  color: var(--title-color);
+  font-family: "Space Grotesk";
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -3px;
+  max-width: 552px;
+  margin-bottom: 32px;
+}
+
+.y2k-text {
+  color: var(--text-color);
+  font-family: "Be Vietnam Pro";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32.5px;
+  max-width: 550px;
+  margin-bottom: 39px;
+}
+
+.y2k-text span {
+  color: var(--title-color);
+  font-weight: 500;
+  background-image: linear-gradient(#fdd34d, #fdd34d);
+  background-repeat: no-repeat;
+  background-size: 100% 8px;
+  background-position: 0 92%;
+}
+
+.y2k-quote {
+  margin-bottom: 39px;
+  padding-left: 24px;
+  border-left: 4px solid var(--accent-orange);
+  color: var(--title-color);
+  font-family: "Space Grotesk";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  max-width: 485px;
+}
+
+.y2k-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.y2k-list li {
+  margin-bottom: 24px;
+  color: var(--title-color);
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  position: relative;
+  padding-left: 34px;
+}
+
+.y2k-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  background: var(--accent-color);
+  transform: translateY(-50%);
+}
+
+.y2k-img {
+  flex: 0 1 552px;
+  max-width: 552px;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.y2k-image {
+  width: 100%;
+  max-width: 552px;
+  height: 736px;
+  object-fit: cover;
+  border-radius: 34px;
+  display: block;
+}
+
+/* gallery */
+
+.gallery {
+  max-width: 1184px;
+  margin: 0 auto;
+  padding-bottom: 128px;
+  background: var(--main-color);
+}
+
+.gallery-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.gallery-heading {
+  max-width: 399px;
+}
+
+.gallery-title {
+  color: var(--title-color);
+  font-family: "Space Grotesk";
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -3px;
+  margin-bottom: 16px;
+}
+
+.gallery-text {
+  color: var(--text-color);
+  font-family: "Be Vietnam Pro";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.gallery-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 75px;
+  color: var(--active-color);
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+}
+
+.gallery-link span img {
+  max-width: 16px;
+}
+
+.gallery-grid {
+  display: grid;
+  row-gap: 24px;
+  column-gap: 24px;
+  align-self: stretch;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card {
+  border-radius: 48px;
+}
+
+.card img {
   max-width: 100%;
-  height: auto;
-  flex-shrink: 0;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.gallery-large {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+  justify-self: stretch;
+}
+
+.gallery-wide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  grid-row: 1 / span 1;
+  grid-column: 3 / span 2;
+  justify-self: stretch;
+}
+
+.gallery-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 1;
+  justify-self: stretch;
+  border-radius: 48px;
 }

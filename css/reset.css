@@ -30,6 +30,12 @@ img {
 
 button {
   border: none;
-   margin: 0;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote {
+  border: none;
+  margin: 0;
   padding: 0;
 }
