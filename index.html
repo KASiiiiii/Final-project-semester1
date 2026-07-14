@@ -61,14 +61,20 @@
             </p>
 
             <div class="hero-actions">
-              <a href="#" class="hero-btn hero-primary">
+              <button type="button" class="hero-btn hero-primary">
                 Explore Archive
                 <span class="hero-arrow">
                   <img src="./img/arrow.png" alt="arrow" />
                 </span>
-              </a>
+              </button>
 
-              <a href="#" class="hero-btn hero-secondary">View Drops</a>
+              <button
+                type="button"
+                class="hero-btn hero-secondary"
+                data-modal-open
+              >
+                View Drops
+              </button>
             </div>
           </div>
 
@@ -76,12 +82,44 @@
             <div class="card hero-main">
               <img src="./img/model.png" alt="model" />
             </div>
+
             <div class="card hero-small">
               <img src="./img/sneaker.png" alt="sneaker" />
             </div>
           </div>
         </div>
       </section>
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="promo">
+          <button class="promo-close" type="button" data-modal-close><img src="./img/close.png" alt=""></button>
+
+          <div class="promo-card">
+            <img src="./img/modal-sneaker.png" alt="Sneaker" />
+
+            <div class="promo-badge">LIMITED</div>
+          </div>
+
+          <h2 class="promo-title">SECRET DROP'S</h2>
+
+          <p class="promo-text">
+            You've unlocked a sun-drenched exclusive reward for the new season
+            collection.
+          </p>
+
+          <div class="promo-discount">
+            <h3>-15%</h3>
+            <p>OFF YOUR NEXT ORDER</p>
+          </div>
+
+          <div class="promo-code"><img src="./img/ticket.png" alt="ticket">GOITEENS-STYLE</div>
+
+          <button class="promo-btn" type="button"><img src="./img/copy.png" alt="copy">Copy Code</button>
+
+          <p class="promo-valid">VALID FOR THE NEXT 24 HOURS ONLY</p>
+        </div>
+      </div>
+      <script type="module" src="./js/modal.js"></script>
 
       <section class="y2k">
         <div class="container">
@@ -187,7 +225,8 @@
         <div class="container">
           <h2 class="table-title">Evolution of Style</h2>
           <p class="table-text">
-            How the urban landscape transformed from the analog 90s to the digital future.
+            How the urban landscape transformed from the analog 90s to the
+            digital future.
           </p>
           <table class="table-table">
             <thead class="table-head">
@@ -227,6 +266,69 @@
           </table>
         </div>
       </section>
+
+      <section class="join">
+        <div class="container join-container">
+          <div class="join-card">
+            <div class="join-content">
+              <div class="join-left">
+                <h2>Join the Movement</h2>
+                <p>
+                  Sign up to receive early access to archive drops, community
+                  lookbooks, and sun-drenched style guides.
+                </p>
+
+                <div class="members">
+                  <div class="avatars">
+                    <img src="./img/Member1.png" alt="Member 1" />
+                    <img src="./img/Member2.png" alt="Member 2" />
+                    <img src="./img/Member3.png" alt="Member 3" />
+                  </div>
+                  <span>+2,400 members</span>
+                </div>
+              </div>
+
+              <form class="join-form">
+                <label>
+                  <span>FULL NAME</span>
+                  <input type="text" placeholder="Alex Rivera" />
+                </label>
+
+                <label>
+                  <span>EMAIL ADDRESS</span>
+                  <input type="email" placeholder="alex@solarium.com" />
+                </label>
+
+                <button type="submit">AUTHENTICATE PROFILE</button>
+
+                <p class="join-terms">
+                  BY JOINING, YOU AGREE TO OUR CURATOR TERMS AND LIFESTYLE
+                  GUIDELINES.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-inner">
+            <a href="./index.html" class="footer-logo">SOLARIUM</a>
+
+            <nav class="footer-nav">
+              <a class="footer-link" href="#" target="_blank">Instagram</a>
+              <a class="footer-link" href="#" target="_blank">Twitter</a>
+              <a class="footer-link" href="#" target="_blank">TikTok</a>
+              <a class="footer-link" href="#" target="_blank">Discord</a>
+            </nav>
+
+            <div class="footer-copy">
+              © 2024 SOLARIUM ARCHIVE. CURATED IN LIGHT.
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
